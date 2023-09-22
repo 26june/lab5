@@ -151,9 +151,9 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
-  let answer = multiply(dynamicArray[0], 1)[0];
+  let answer = 1;
 
-  for (let i = 1; i < dynamicArray.length; i++) {
+  for (let i = 0; i < dynamicArray.length; i++) {
     answer *= multiply(dynamicArray[i], 1)[0];
   }
 
