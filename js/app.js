@@ -60,8 +60,8 @@ function sumAndMultiply(a, b, c) {
   const output = [];
   output[0] = sum(sum(a, b)[0], c)[0];
   output[1] = multiply(multiply(a, b)[0], c)[0];
-  output[2] = `${a} and ${b} and ${c} sum to ${a + b + c}.`;
-  output[3] = `The product of ${a} and ${b} and ${c} is ${a * b * c}.`;
+  output[2] = `${a} and ${b} and ${c} sum to ${output[0]}.`;
+  output[3] = `The product of ${a} and ${b} and ${c} is ${output[1]}.`;
   return output;
 }
 
