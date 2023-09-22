@@ -57,13 +57,21 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  const output = [];
-  output[0] = sum(sum(a, b)[0], c)[0];
-  output[1] = multiply(multiply(a, b)[0], c)[0];
-  output[2] = `${a} and ${b} and ${c} sum to ${output[0]}.`;
-  output[3] = `The product of ${a} and ${b} and ${c} is ${output[1]}.`;
-  return output;
+
+  let answer1 = sum(sum(a, b)[0], c)[0];
+  let answer2 = multiply(multiply(a, b)[0], c)[0];
+  let answer3 = `${a} and ${b} and ${c} sum to ${answer1}.`;
+  let answer4 = `The product of ${a} and ${b} and ${c} is ${answer2}.`;
+
+  return [answer1, answer2, answer3, answer4];
 }
+
+// const output = [];
+// output[0] = sum(sum(a, b)[0], c)[0];
+// output[1] = multiply(multiply(a, b)[0], c)[0];
+// output[2] = `${a} and ${b} and ${c} sum to ${output[0]}.`;
+// output[3] = `The product of ${a} and ${b} and ${c} is ${output[1]}.`;
+// return output;
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4, 7, 5);
