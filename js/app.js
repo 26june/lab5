@@ -154,7 +154,7 @@ function multiplyAnyArray(dynamicArray) {
   let answer = 1;
 
   for (let i = 0; i < dynamicArray.length; i++) {
-    answer *= multiply(dynamicArray[i], 1)[0];
+    answer = multiply(dynamicArray[i], answer)[0];
   }
 
   return [answer, `The numbers ${dynamicArray} have a product of ${answer}.`];
