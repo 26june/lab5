@@ -58,8 +58,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
   const output = [];
-  output[0] = a + b + c;
-  output[1] = a * b * c;
+  output[0] = sum(sum(a, b)[0], c)[0];
+  output[1] = multiply(multiply(a, b)[0], c)[0];
   output[2] = `${a} and ${b} and ${c} sum to ${a + b + c}.`;
   output[3] = `The product of ${a} and ${b} and ${c} is ${a * b * c}.`;
   return output;
@@ -143,9 +143,17 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+
+  let answer = multiply(dynamicArray[0], dynamicArray[1]);
+
+  for (let i = 2; i < dynamicArray.length; i++) {
+    answer *= dynamicArray[i];
+  }
+
+  return answer;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
